@@ -6,7 +6,7 @@ public List<Account> checkAccounts(List<Account> accounts)
 
     for(Account acc : accounts) {
         if(acc.BillingCity == null || String.isEmpty(acc.BillingCity)) {
-            throw new AccountException();
+            throw new AccountException('Invalid BillingCity');
         }
     }
     return accounts;
