@@ -1,6 +1,5 @@
 public String reverseWordsInASentence(String sentence){
     
-    String sentence = 'The quick brown fox jumps over the lazy dog';
     List<String> words = new List<String>();
     words = sentence.split(' ');
     String reorderedSentence = '';
