@@ -4,5 +4,5 @@ public Boolean isPrime(Integer num) {
         return (Math.mod(num, i)==0) ? false : true;
         break;
     }
-    return true;
+    return ;
 }
