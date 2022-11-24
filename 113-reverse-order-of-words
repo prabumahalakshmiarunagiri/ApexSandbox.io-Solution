@@ -1,14 +1,30 @@
 public String reverseWordsInASentence(String sentence){
     
-    if(String.isEmpty(sentence)) return '';
+    if(sentence == null ){
 
-    //List<String> words = new List<String>();
-    //words = sentence.split(' ');
-    
-    String reorderedSentence = '';
+        return null;
 
-    for(Integer i=(sentence.length()-1); i>=0; i--) {
-        reorderedSentence += sentence.substring(i, i+1);
     }
-    return reorderedSentence;
+
+    List<String> ls = sentence?.split(' ');
+
+    string reverseStr ='';
+
+    for(Integer i = ls.size()-1;i>=0;i--){
+
+        if(reverseStr == ''){
+
+        reverseStr += ls[i];
+
+        }
+
+        else{
+
+         reverseStr += ' '+ls[i];
+
+        }
+
+    }
+
+    return reverseStr;
 }
