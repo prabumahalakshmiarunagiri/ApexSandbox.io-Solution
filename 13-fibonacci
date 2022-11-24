@@ -1,13 +1,5 @@
 public Integer fibonacci(Integer n) {
 
-    Integer a = 1;
-    Integer b = 1;
-    Integer c = 1;
-
-    for(Integer i=3; i<=n;i++) {
-        c = b;
-        b = a;
-        a = a + c;
-    }
-    return a;
+    if (n < 3) return 1;
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
