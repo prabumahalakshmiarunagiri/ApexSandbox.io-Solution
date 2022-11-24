@@ -2,8 +2,15 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
 {
     List<sObject> sObjList = new List<sObject>();
 
-    for(sObject sObj : sObjList) {
-        sObjList.add(sObj);
+    if(!accounts?.) {
+        for(Account acc : accounts) {
+            sObjList.add(acc);
+        }
+    }
+    if(!contacts?.) {
+        for(Contact con : contacts) {
+            sObjList.add(con);
+        }
     }
     return sObjList;
 }
