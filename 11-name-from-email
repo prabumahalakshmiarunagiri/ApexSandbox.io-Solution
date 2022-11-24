@@ -1,0 +1,10 @@
+public String nameFromEmail(String email) {
+    
+    if(String.isEmpty(email)) return 'Not a valid input';
+
+    String getName = email.substringBefore(@);
+    String firstName = getName.substringBefore(.);
+    String lastName = getName.substringAfterLast(.);
+
+    return firstName+' '+lastName;
+}
