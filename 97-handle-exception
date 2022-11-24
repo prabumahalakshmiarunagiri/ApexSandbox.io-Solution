@@ -1,6 +1,8 @@
 public String divide(Integer a, Integer b){
 
     try {
+
+        if(a == null || b == null) return 'Attempt to de-reference a null object';
         if(b == 0) return 'Divide by 0';
 
         Integer remainder = Math.mod(a, b);
