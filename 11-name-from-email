@@ -4,7 +4,7 @@ public String nameFromEmail(String email) {
 
     String getName = email.substringBefore(@);
     String firstName = getName.substringBefore(.);
-    String lastName = getName.substringAfterLast(.);
+    String lastName = getName.substringAfter(.);
 
     return firstName+' '+lastName;
 }
