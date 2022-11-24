@@ -1,0 +1,11 @@
+public String divide(Integer a, Integer b){
+
+    try {
+        if(b == 0) return 'Divide by 0';
+
+        Integer remainder = Math.mod(a, b);
+        return String.valueOf(remainder);
+    } catch(Exception ex) {
+        throw new HandledException('Exception occured during division of '+String.valueOf(a)+'/'+String.valueOf(b));
+    }
+}
