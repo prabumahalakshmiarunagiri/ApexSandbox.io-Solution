@@ -3,8 +3,8 @@ public String nameFromEmail(String email) {
     if(String.isEmpty(email)) return 'Not a valid input';
 
     String getName = email.substringBefore(@);
-    String firstName = getName.substringBefore(.);
-    String lastName = getName.substringAfter(.);
+    String firstName = getName.substringBefore(.).toLowercase.capitalize();
+    String lastName = getName.substringAfter(.).toLowercase.capitalize();
 
     return firstName+' '+lastName;
 }
