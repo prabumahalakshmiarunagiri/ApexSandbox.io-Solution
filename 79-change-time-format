@@ -2,8 +2,8 @@ public String changeTimeFormat(String strTime) {
     
     if(String.isEmpty(strTime)) return 'Not a valid input';
 
-    String getHours = strTime.substringBefore(:);
-    String getMins = strTime.substringAfter(:);
+    String getHours = strTime.substringBefore(':');
+    String getMins = strTime.substringAfter(':');
     String meridian = 'AM';
     Integer formattedHours;
 
