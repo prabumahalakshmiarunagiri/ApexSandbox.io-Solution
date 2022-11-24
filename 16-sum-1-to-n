@@ -1,0 +1,10 @@
+public Integer sumToN(Integer n) {
+    if(n == 0) return 0;
+    Integer tempNum = Math.abs(n);
+    Integer returnNum = 0;
+
+    for(Integer i=1; i<tempNum; i++) {
+        returnNum += i;
+    }
+    return returnNum;
+}
