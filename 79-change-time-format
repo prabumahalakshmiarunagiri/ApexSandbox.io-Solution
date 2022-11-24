@@ -18,6 +18,10 @@ public String changeTimeFormat(String strTime) {
         meridian = 'AM';
         return '12:'+getMins+' '+meridian;
     }
+    if(getHours == '12') {
+        meridian = 'PM';
+        return '12:'+getMins+' '+meridian;
+    }
     return getHours+':'+getMins+' '+meridian;
 
 }
