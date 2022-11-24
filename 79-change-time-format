@@ -7,11 +7,6 @@ public String changeTimeFormat(String strTime) {
     String meridian = 'AM';
     Integer formattedHours;
 
-    String getHours = strTime.substringBefore(':');
-    String getMins = strTime.substringAfter(':');
-    String meridian = 'AM';
-    Integer formattedHours;
-
     if(Integer.valueOf(getHours) > 12) {
         formattedHours = Integer.valueOf(getHours) - 12;
         meridian = 'PM';
