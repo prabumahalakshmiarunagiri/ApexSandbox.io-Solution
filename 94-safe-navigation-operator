@@ -1,0 +1,4 @@
+public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
+   
+   String firstAccBillingCity = (accounts[0]?.BillingCity != null) ? accounts[0].BillingCity.capitalize() : null;
+}
