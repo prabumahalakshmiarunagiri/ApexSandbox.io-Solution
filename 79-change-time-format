@@ -8,14 +8,14 @@ public String changeTimeFormat(String strTime) {
     Integer formattedHours;
 
     if(Integer.valueOf(getHours) > 12) {
-        formattedHours = getHours - 12;
+        formattedHours = Integer.valueOf(getHours) - 12;
         meridian = 'PM';
-        return formattedHours+getMins+' '+meridian;
+        return String.valueOf(formattedHours)+getMins+' '+meridian;
     }
     if(getHours == '00') {
-        formattedHours = '12';
+        formattedHours = String.valueOf(12);
         meridian = 'AM';
-        return formattedHours+getMins+' '+meridian;
+        return String.valueOf(formattedHours)+getMins+' '+meridian;
     }
     return getHours+getMins+' '+meridian;
 
