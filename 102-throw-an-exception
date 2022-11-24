@@ -1,6 +1,6 @@
 public List<Account> checkAccounts(List<Account> accounts)
 {
-    if(accounts.isEmpty() || accounts.size()==0 || accounts == null) {
+    if(accounts == null) {
         throw new IllegalArgumentException('accounts should not be null');
     }
 
