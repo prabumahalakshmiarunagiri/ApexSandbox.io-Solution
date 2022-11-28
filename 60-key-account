@@ -1,23 +1,19 @@
 public Boolean isKeyAccount(Account a) {
     
-    if(a == null || a.Industry || a.AnnualRevenue) {
-        return false;
-    }
+    if(a == null || a.Industry || a.AnnualRevenue) return false;
 
-    if(a.Industry == 'Banking' && (a.AnnualRevenue != 600000 || a.AnnualRevenue < 600000)) {
-        return false;
-    } else if(a.Industry == 'Technology' && (a.AnnualRevenue != 800000 || a.AnnualRevenue < 800000)) {
-        return false;
-    } else if (a.Industry == 'Retail' && (a.AnnualRevenue != 200000 || a.AnnualRevenue < 200000)) {
-        return false;
-    } else if ((a.Industry != 'Banking' ||
-               a.Industry != 'Technology' ||
-               a.Industry != 'Retail') &&
-               (a.AnnualRevenue != 500000 || a.AnnualRevenue < 500000)
-              ) {
-                  return false;
-    } else {
-        return true;
+    switch on a.Industry {
+        when 'Banking' {
+            return a.AnnualRevenue >= 600000;
+        }
+        when 'Technology' {
+            return a.AnnualRevenue >= 800000;
+        }
+        when 'Retail' {
+            return a.AnnualRevenue >= 2000000;
+        }
+        when else {
+            return a.AnnualRevenue >= 500000;
+        }
     }
-    return true;
 }
