@@ -1,0 +1,13 @@
+public static Integer arraySum(List<Integer> numbers) {
+    
+    Integer result = 0;
+
+    Integer size = numbers?.size();
+
+    if(size != null){
+        for(i=0;i<size;i++) {
+            result += result + numbers.get(i);
+        }
+    }
+    return result;
+}
