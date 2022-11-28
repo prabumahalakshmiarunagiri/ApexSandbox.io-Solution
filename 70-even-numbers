@@ -1,13 +1,9 @@
 public List<Integer> evenNumbers(Integer n) {
-    
-    List<Integer> intList = new List<Integer>();
-    
-    if(n < 2) return new List<Integer>{2};
 
-    for(Integer i=2; i < n; i++) {
-        i += 2;
-        intList.add(i);
+    List<Integer> nums = new List<Integer>();
+    
+    for (Integer i=2; i<=n * 2; i += 2) {
+        nums.add(i);
     }
-    intList.sort();
-    return intList;
+    return nums;
 }
