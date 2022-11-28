@@ -6,7 +6,7 @@ public static Integer arraySum(List<Integer> numbers) {
 
     if(size != null){
         for(Integer i=0;i<size;i++) {
-            result += result + numbers.[i];
+            result += result + numbers[i];
         }
     }
     return result;
