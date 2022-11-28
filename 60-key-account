@@ -1,7 +1,4 @@
 public Boolean isKeyAccount(Account a) {
-    
-    if(a == null || a.Industry || a.AnnualRevenue) return false;
-
     switch on a.Industry {
         when 'Banking' {
             return a.AnnualRevenue >= 600000;
