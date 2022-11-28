@@ -1,8 +1,8 @@
 public static Integer arraySum(List<Integer> numbers) {
     
+    if(numbers?.size()==0) return 0;
+    
     Integer result = 0;
-
-    Integer size = numbers?.size();
 
     if(size != null){
         for(Integer i=0;i<size;i++) {
