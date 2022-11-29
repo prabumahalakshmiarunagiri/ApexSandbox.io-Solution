@@ -1,19 +1,19 @@
 public Boolean companionPlants(List<String> plants) {
     
     Boolean isCompanion;
-    
+
     if (plants.size() == 0) return true;
     if (plants.size() == 1) return false;
 
     for(Integer i=0; i<plants.size()-1; i++) {
 
-        if(plants[i] == 'onions' &&
+        if(plants[i] == 'onions' && plants[i] != 'onions' &&
             (plants[i+1] == 'lettuce' ||
             plants[i+1] == 'carrots' ||
             plants[i+1] == 'tomatoes' )) {
                 isCompanion = true;
         } 
-        else if(plants[i] == 'lettuce' &&
+        else if(plants[i] == 'lettuce' && && plants[i] != 'lettuce' &&
             (plants[i+1] == 'cucumbers' ||
             plants[i+1] == 'onions' )) {
                 isCompanion = true;
