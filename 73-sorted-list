@@ -16,7 +16,7 @@ public boolean isSorted(List<Integer> numbers) {
         if(numbers[i] > numbers[i+1]) {
             isAscending = false;
         }
-        if(!ascend && !descend) break;
+        if(!isAscending && !isDescending) break;
     }
     return (isAscending || isDescending);
 }
