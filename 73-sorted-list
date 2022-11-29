@@ -1,6 +1,18 @@
 public boolean isSorted(List<Integer> numbers) {
     
     if(numbers.size() < 3) return true;
+    Boolean isAscending;
+    Boolean isDescending;
 
-    
+    for(Integer i=0; i<numbers.size(); i++) {
+        if(numbers[i] < numbers[i+1]) {
+            isAscending = true;
+        } else if(numbers[i] > numbers[i+1]) {
+            isDescending = false;
+        } else {
+            isAscending = false;
+            isDescending = false;
+        }
+    }
+    return isAscending || isDescending;
 }
