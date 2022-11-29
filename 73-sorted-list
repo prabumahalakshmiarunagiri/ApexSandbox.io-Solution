@@ -18,5 +18,5 @@ public boolean isSorted(List<Integer> numbers) {
         }
         if(!ascend && !descend) break;
     }
-    return isAscending || isDescending;
+    return (isAscending || isDescending);
 }
