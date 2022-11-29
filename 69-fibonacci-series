@@ -7,7 +7,7 @@ public List<Integer> fibonacciSeries(Integer n) {
     List<Integer> fibonacci = new List<Integer> {1,1,2};
 
     if(n < 3) {
-        return fibonacci.add(1,1,2);
+        return fibonacci;
     }
 
     for(Integer i=3; i<n; i++) {
