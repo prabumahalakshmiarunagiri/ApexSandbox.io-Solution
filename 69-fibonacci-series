@@ -1,20 +1,9 @@
 public List<Integer> fibonacciSeries(Integer n) {
     
-    Integer a = 1;
-    Integer b = 1;
-    Integer c;
-
-    List<Integer> fibonacci = new List<Integer> {1,1,2};
-
-    if(n < 3) {
-        return fibonacci;
+    if (n == 1) return new List<Integer> {1};
+    List<Integer> fibSeries = new List<Integer> {1, 1};
+    for (Integer i=2; i<n; i++) {
+        fibSeries.add(fibSeries[i-1] + fibSeries[i-2]);
     }
-
-    for(Integer i=3; i<n; i++) {
-        c = b;
-        b = a;
-        a = a + c;
-        fibonacci.add(c);
-    }
-    return fibonacci;
+    return fibSeries;
 }
