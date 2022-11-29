@@ -21,7 +21,7 @@ public Boolean companionPlants(List<String> plants) {
         if(plants[i] == 'carrots' && plants[i+1] != 'carrots' && plants[i+1] == 'onions') {
                 isCompanion = true;
         } 
-        if(plants[i] == 'tomatoes' && plants[i+1] != 'tomatoes' && plants[i+1] == 'onions') {
+        if(plants[i] == 'tomatoes' && plants[i+1] != 'tomatoes' && plants[i+1] != 'onions') {
                 isCompanion = true;
         }
         isCompanion = false;
