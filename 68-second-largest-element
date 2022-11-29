@@ -5,11 +5,11 @@ public Integer secondLargest(List<Integer> numbers) {
     Integer currentValue;
 
     for(Integer i=0; i<numbers.size(); i++) {
-        currentValue = numbers[i];
-
-        if(currentValue > largestSeen) {
-            largestSeen = currentValue;
+        if (numbers[i] < largestSeen && numbers[i] > secondLargestSeen) {
+            secondLargestSeen = numbers[i];
+        } else if (numbers[i] > largestSeen) {
             secondLargestSeen = largestSeen;
+            largestSeen = numbers[i];
         }
     }
     return secondLargestSeen;
