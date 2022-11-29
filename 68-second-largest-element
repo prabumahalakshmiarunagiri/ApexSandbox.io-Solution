@@ -2,7 +2,6 @@ public Integer secondLargest(List<Integer> numbers) {
     
     Integer largestSeen = -2147483647 - 1;
     Integer secondLargestSeen = -2147483647 - 1;
-    Integer currentValue;
 
     for(Integer i=0; i<numbers.size(); i++) {
         if (numbers[i] < largestSeen && numbers[i] > secondLargestSeen) {
