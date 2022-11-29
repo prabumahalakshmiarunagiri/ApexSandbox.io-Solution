@@ -3,18 +3,20 @@ public boolean isSorted(List<Integer> numbers) {
     if(numbers.size() == 0) return true;
     if(numbers.size() < 3) return true;
 
-    Boolean isAscending;
-    Boolean isDescending;
+    Boolean isAscending = true;
+    Boolean isDescending = true;
 
     for(Integer i=0; i<numbers.size()-1; i++) {
-        if(numbers[i] <= numbers[i+1]) {
-            isAscending = true;
-        } else if(numbers[i] => numbers[i+1]) {
-            isDescending = false;
-        } else {
-            isAscending = false;
+
+        if(numbers[i] == numbers[i+1]) continue;
+
+        if(numbers[i] < numbers[i+1]) {
             isDescending = false;
         }
+        if(numbers[i] > numbers[i+1]) {
+            isAscending = false;
+        }
+        if(!ascend && !descend) break;
     }
     return isAscending || isDescending;
 }
