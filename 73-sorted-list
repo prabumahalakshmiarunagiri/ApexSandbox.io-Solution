@@ -1,0 +1,6 @@
+public boolean isSorted(List<Integer> numbers) {
+    
+    if(numbers.size() < 3) return true;
+
+    
+}
