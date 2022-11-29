@@ -1,0 +1,16 @@
+public Integer secondLargest(List<Integer> numbers) {
+    
+    Integer largestSeen = -2147483647 - 1;
+    Integer secondLargestSeen = -2147483647 - 1;
+    Integer currentValue;
+
+    for(Integer i=0; i<numbers.size(); i++) {
+        currentValue = numbers[i];
+
+        if(currentValue > largestSeen) {
+            largestSeen = currentValue;
+            secondLargestSeen = largestSeen;
+        }
+    }
+    return secondLargestSeen;
+}
