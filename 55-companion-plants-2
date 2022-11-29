@@ -13,7 +13,7 @@ public Boolean companionPlants(List<String> plants) {
             plants[i+1] == 'tomatoes' )) {
                 isCompanion = true;
         } 
-        else if(plants[i] == 'lettuce' && && plants[i] != 'lettuce' &&
+        else if(plants[i] == 'lettuce' && plants[i] != 'lettuce' &&
             (plants[i+1] == 'cucumbers' ||
             plants[i+1] == 'onions' )) {
                 isCompanion = true;
