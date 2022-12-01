@@ -9,6 +9,11 @@ public Set<Integer> setUnion(Set<Integer> set1, Set<Integer> set2) {
     for(Integer num : set2) {
         unionSet.add(num);
     }
+
+    /*
+    Set<Integer> unionSet = new Set<Integer>(set1);
+    unionSet.addAll(set2);
+    */
     
     return unionSet;
 }
