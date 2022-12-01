@@ -1,13 +1,7 @@
 public Set<Integer> setIntersection(Set<Integer> set1, Set<Integer> set2) {
     
-    Set<Integer> intersectionSet = new Set<Integer>();
+    Set<Integer> intersectionSet = new Set<Integer>(set1);
+    Boolean isRetained = intersectionSet.retainAll(set2);
 
-    for(Integer i=0; i<set1.size(); i++) {
-        for(Integer j=0; j<set2.size(); j++) {
-            if(i==j) {
-                intersectionSet.add(set1[i]);
-            }
-        }
-    }
-    return intersectionSet;
+    return isRetained ? intersectionSet : intersectionSet;
 }
