@@ -3,5 +3,5 @@ public Set<Integer> setIntersection(Set<Integer> set1, Set<Integer> set2) {
     Set<Integer> intersectionSet = new Set<Integer>(set1);
     Boolean isRetained = intersectionSet.retainAll(set2);
 
-    return isRetained ? intersectionSet : intersectionSet;
+    return isRetained ? intersectionSet : intersectionSet.addAll(set2);
 }
