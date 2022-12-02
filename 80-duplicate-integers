@@ -2,5 +2,5 @@ public Boolean containsDuplicates(List<Integer> nums) {
     
     Set<Integer> removeDupes = new Set<Integer>(nums);
 
-    return nums.size() == removeDupes.size();
+    return nums.size() != removeDupes.size();
 }
