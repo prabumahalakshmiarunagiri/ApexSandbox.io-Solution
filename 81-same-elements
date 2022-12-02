@@ -3,7 +3,7 @@ public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
     Set<Integer> nums1Set = new Set<Integer>(nums1);
 
     for(Integer i=0; i< nums1Set.size(); i++) {
-        if(!nums2.contains(nums1Set[i])) return false;
+        if(!nums2[i].contains(nums1Set[i])) return false;
     }
     return true;
 }
