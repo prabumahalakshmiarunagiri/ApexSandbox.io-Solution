@@ -1,3 +1,4 @@
 public String employeeEmail(Map<String, String> employeeIdToEmail, String employeeId) {
-    //code here
+    
+    return String.isNotEmpty(employeeIdToEmail.get(employeeId))? employeeIdToEmail.get(employeeId) : 'info@apexsandbox.io';
 }
