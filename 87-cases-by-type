@@ -5,8 +5,12 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
     for(Case c : cases) {
         if(c.Type != null) {
             if(caseTypeMap.containsKey(c.Type)) {
+                List<Case> caseList = caseTypeMap.get(c.Type);
+                caseTypeMap.put(c.Type, caseList);
+            } else {
                 caseTypeMap.put(c.Type, new List<Case>{c});
             }
         }
     }
+    return caseTypeMap;
 }
