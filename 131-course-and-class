@@ -14,7 +14,7 @@ public void createCourseAndClass(String name, String description) {
     if(description.length() > 255) {
         clas.apxio__Description__c = description?.left(255);
     } else {
-        clas.apxio__Description__c = description;
+        clas.apxio__Description__c = ?.description;
     }
     insert clas;
 }
