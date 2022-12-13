@@ -10,7 +10,10 @@ public void createCourseAndClass(String name, String description) {
 
     class.Name = name;
     class.apxio__Course__c = course.Id;
-    if(description.length() > 255) class.apxio__Description__c = description.left(255);
-    else class.apxio__Description__c = description;
+    if(description.length() > 255) {
+        class.apxio__Description__c = description.left(255);
+    } else {
+        class.apxio__Description__c = description;
+    }
     insert class;
 }
