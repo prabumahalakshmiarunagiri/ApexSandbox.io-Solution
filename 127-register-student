@@ -10,11 +10,7 @@ public String registerStudent(String name, String phone, String email) {
     apxio__Student__c registeredStudent = [SELECT Id, apxio__Registration_Number__c 
                         FROM apxio__Student__c 
                         WHERE 
-                        Name=name 
-                        AND 
-                        apxio__Phone__c=phone 
-                        AND 
-                        apxio__Email__c=email];
+                        Id: student.Id];
     return registeredStudent.apxio__Registration_Number__c;
     
 }
