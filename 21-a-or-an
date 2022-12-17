@@ -1,8 +1,10 @@
 public String aOrAn(String word) {
 
-    return (word.StartsWithIgnoreCase('a') ||
+    /*return (word.StartsWithIgnoreCase('a') ||
             word.StartsWithIgnoreCase('e') ||
             word.StartsWithIgnoreCase('i') ||
             word.StartsWithIgnoreCase('o') ||
-            word.StartsWithIgnoreCase('u')) ? 'an '+word : 'a '+word;
+            word.StartsWithIgnoreCase('u')) ? 'an '+word : 'a '+word;*/
+
+    return 'aeiou'.containsAny(word.left(1)) ? 'an ' + word : 'a '+word;
 }
