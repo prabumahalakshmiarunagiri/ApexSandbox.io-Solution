@@ -1,0 +1,8 @@
+public String aOrAn(String word) {
+
+    return (word.StartsWithIgnoreCase('a') ||
+            word.StartsWithIgnoreCase('e') ||
+            word.StartsWithIgnoreCase('i') ||
+            word.StartsWithIgnoreCase('o') ||
+            word.StartsWithIgnoreCase('u') ||) ? 'an '+word : 'a '+word;
+}
