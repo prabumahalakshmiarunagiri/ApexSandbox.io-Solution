@@ -4,5 +4,5 @@ public String aOrAn(String word) {
             word.StartsWithIgnoreCase('e') ||
             word.StartsWithIgnoreCase('i') ||
             word.StartsWithIgnoreCase('o') ||
-            word.StartsWithIgnoreCase('u') ||) ? 'an '+word : 'a '+word;
+            word.StartsWithIgnoreCase('u')) ? 'an '+word : 'a '+word;
 }
