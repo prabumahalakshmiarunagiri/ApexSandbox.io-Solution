@@ -1,0 +1,4 @@
+public Boolean isEndWithZero(Integer num){
+     
+     return (String.valueOf(num).right(1) == '0');
+}
