@@ -2,9 +2,13 @@ public Boolean companionPlants(String plant1, String plant2) {
     
     Map<String, String> companionMap = new Map<String, String> {
         'lettuce' => 'cucumbers',
+        'cucumbers' => 'lettuce',
         'lettuce' => 'onions',
+        'onions' => 'lettuce',
         'onions' => 'carrots',
-        'onions' => 'tomatoes'
+        'carrots' => 'onions',
+        'onions' => 'tomatoes',
+        'tomatoes' => 'onions'
     };
 
     return companionMap.get(plant1) == plant2 || companionMap.get(plant2) == plant1;
