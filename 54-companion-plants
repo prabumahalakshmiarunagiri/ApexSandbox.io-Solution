@@ -1,6 +1,6 @@
 public Boolean companionPlants(String plant1, String plant2) {
     
-    Map<String, Boolean> companionMap = new Map<String, Boolean> {
+    Map<String, String> companionMap = new Map<String, String> {
         'lettuce' => 'cucumbers',
         'lettuce' => 'onions',
         'onions' => 'carrots',
