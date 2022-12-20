@@ -11,5 +11,5 @@ public Boolean companionPlants(String plant1, String plant2) {
         'tomatoes' => 'onions'
     };
 
-    return companionMap.get(plant1) == plant2;
+    return companionMap.get(plant1) == plant2 || companionMap.get(plant2) == plant1;
 }
