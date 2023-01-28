@@ -5,7 +5,7 @@ public Id classFromCourse(String courseName) {
                                     FROM apxio__Course__c 
                                     WHERE Name=: courseName];
     
-    if(course.size() < 0) return NULL;
+    if(courseList.size() < 0) return NULL;
 
     for(apxio__Course__c course : courseList) {
         courseMap.put(course.Name, course);
