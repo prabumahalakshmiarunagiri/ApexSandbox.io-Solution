@@ -1,5 +1,24 @@
 public Id classFromCourse(String courseName) {
+
+    Map<String, apxio__Course__c> courseMap = new Map<String, apxio__Course__c>();
+    List<apxio__Course__c> courseList = [SELECT Id, Name 
+                                    FROM apxio__Course__c 
+                                    WHERE Name=: courseName];
     
+    if(course.size() < 0) return NULL;
+
+    for(apxio__Course__c course : courseList) {
+        courseMap.put(course.Name, course);
+    }
+
+    apxio__Class__c classObj = new apxio__Class__c();
+    classObj.Name = courseName;
+    classObj.apxio__Course__c = courseMap.get(courseName).Id;
+    insert classObj;
+
+    return classObj.Id;
+
+    /*
     List<apxio__Course__c> course = [SELECT Id, Name FROM apxio__Course__c WHERE Name=: courseName];
 
     if(course.size() == 0) return null;
@@ -10,4 +29,5 @@ public Id classFromCourse(String courseName) {
     insert classObj;
 
     return classObj.Id;
+    */
 }
