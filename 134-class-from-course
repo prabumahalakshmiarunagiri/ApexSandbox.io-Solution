@@ -6,7 +6,7 @@ public Id classFromCourse(String courseName) {
 
     apxio__Class__c classObj = new apxio__Class__c();
     classObj.Name = courseName;
-    classObj.apxio__Course__c = course.Id;
+    classObj.apxio__Course__c = course[0].Id;
     insert classObj;
 
     return classObj.Id;
