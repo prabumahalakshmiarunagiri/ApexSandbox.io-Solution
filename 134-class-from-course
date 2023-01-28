@@ -1,8 +1,8 @@
 public Id classFromCourse(String courseName) {
     
-    apxio__Course__c course = [SELECT Id, Name FROM apxio__Course__c WHERE Name=: courseName];
+    List<apxio__Course__c> course = [SELECT Id, Name FROM apxio__Course__c WHERE Name=: courseName];
 
-    if(course.Id == null) return null;
+    if(course.size() == 0) return null;
 
     apxio__Class__c classObj = new apxio__Class__c();
     classObj.Name = courseName;
